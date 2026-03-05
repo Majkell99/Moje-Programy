@@ -1,19 +1,20 @@
 #include <stdio.h>
 
+int binarna(int n)
+{
+    if(n == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        binarna(n / 2);
+        printf("%d", n % 2);
+    }
+}
+
 int main() {
-    float S = 7;
-    float x = 5;
 
-    float x1;
-
-    do {
-        x1 = (x + (S / x)) / 2;
-
-        x = x1;
-
-    } while ((x1 - x) > 0.0001);
-
-    printf("%f", x1);
-
+    binarna(20);
     return 0;
 }
