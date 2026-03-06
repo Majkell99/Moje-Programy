@@ -1,20 +1,31 @@
 #include <stdio.h>
 
-int binarna(int n)
-{
-    if(n == 0)
-    {
-        return 0;
-    }
-    else
-    {
-        binarna(n / 2);
-        printf("%d", n % 2);
-    }
-}
-
 int main() {
+    int liczba = 5;
+    switch(liczba)
+    {
+        case 1:
+            printf("pn");
+            break;
+        case 2:
+            printf("wt");
+            break;
+        case 3:
+            printf("sr");
+            break;
+        case 4:
+            printf("czw");
+            break;
+        case 5:
+            printf("pt");
+            break;
+        case 6:
+            printf("sob");
+            break;
+        case 7:
+            printf("nd");
+            break;
 
-    binarna(20);
+    }
     return 0;
 }
