@@ -1,26 +1,28 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include <limits.h>
 
-int pierwsza(int n, int dzielnik)
-{
-    if(n % dzielnik == 0)
-    {
-        return 0;
-    }
+int main(void) {
+    double d = 1;
+    float f = 1;
 
-    return pierwsza(n, dzielnik + 1);
+    char c = 'A';
+    bool b = false;
+
+    f += 1.0f;
+
+    unsigned int ui = INT_MAX + 1U;
+
+    printf("l = %ld\n", 3L);
+
+    printf("c = %c\n", c);
+    printf("b = %d\n", b);
+
+    // Poniższe instrukcje zostały dodane po to, aby kompilator nie zgłaszał
+    // błędów związanych z nieużywanymi zmiennymi.
+    ui += 1;
+    d += 0.0;
+
+    return EXIT_SUCCESS;
 }
-
-int main()
-{
-    if(pierwsza(6) == 0)
-    {
-        printf("Nie pierwsza");
-    }
-    else
-    {
-        printf("Pierwsza");
-    }
-
-    return 0;
-}
-// NIE WIEM
