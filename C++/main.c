@@ -1,24 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <mylib.h>
 
-int main() {
+int main(void) {
 
-    int* tab = (int*)malloc(10*sizeof(int));
-
-    if (tab == NULL)
-    {
-        return 1;
-    }
-
-    for(int i = 0; i < 10; i++)
-    {
-        tab[i] = rand() % 100;
-    }
-
-    for(int i = 0; i < 10; i++)
-    {
-        printf("%d ", tab[i]);
-    }
+    byte y = 4;
+    transform((byte*) &y);
+    printf("%d", y);
 
     return 0;
 }
